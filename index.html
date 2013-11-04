@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Spring-integration-base by rynr</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Spring-integration-base</h1>
+        <h2>Example Basic Setup for spring-integration</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/rynr/spring-integration-base/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/rynr/spring-integration-base/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/rynr/spring-integration-base" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="spring-integration-base" class="anchor" href="#spring-integration-base"><span class="octicon octicon-link"></span></a>spring-integration-base</h1>
+
+<p>When I started looking at spring-integration, I had troubles getting a simple
+setup. So here's my result, feel free to use it, and if you have a idea, please
+provide updates.</p>
+
+<p>This setup does use gradle, but it's easy to adapt to maven.</p>
+
+<h2>
+<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
+
+<p>The following files are in the project:</p>
+
+<pre><code>README.md                                    this Readme
+build.gradle                                 gradle-configuration
+src/main/webapp/WEB-INF/servlet-config.xml   spring-integration configuration
+src/main/webapp/WEB-INF/web.xml              web-container configuration
+</code></pre>
+
+<p>To start using spring-integration, take a first look at <code>build.gradle</code> and
+choose, witch further artifacts of spring-integration you want to enable, by
+default, I just enabled core, so you probably want to also enable http, jmx or
+mail.</p>
+
+<p>Now take a look at <code>servlet-config.xml</code>, here I enabled most namespaces (you
+can get rid of the ones you don't want to use). Now this is the file you want
+to start to define all spring-beans including the spring-integration beans.</p>
+
+<p>It's easiest, if you install a plugin to your IDE, like STS for eclipse, see
+<a href="http://spring.io/tools/sts">http://spring.io/tools/sts</a>.</p>
+
+<h2>
+<a name="build" class="anchor" href="#build"><span class="octicon octicon-link"></span></a>Build</h2>
+
+<p>Run <code>gradle build</code> to build and test the whole project:</p>
+
+<pre><code>rjung:~/spring-integration-base$ gradle build
+:compileJava UP-TO-DATE
+:processResources
+:classes
+:war
+:assemble
+:compileTestJava UP-TO-DATE
+:processTestResources
+:testClasses
+:test
+:check
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 6.211 secs
+rjung:~/spring-integration-base$
+</code></pre>
+
+<p>Using <code>gradle jettyRun</code> you can directly run the code locally with jetty, stop
+it with Ctrl-C:</p>
+
+<pre><code>rjung:~/Projects/spring-integration-base[master*]$ gradle jettyRun
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+&gt; Building &gt; :jettyRun &gt; Running at http://localhost:8080/spring-integration-base
+</code></pre>
+
+<p>See further tasks by running <code>gradle tasks</code>.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
