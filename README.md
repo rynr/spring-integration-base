@@ -17,9 +17,17 @@ The following files are in the project:
     src/main/webapp/WEB-INF/servlet-config.xml   spring-integration configuration
     src/main/webapp/WEB-INF/web.xml              web-container configuration
 
-To start using spring-integration, change `servlet-config.xml` (perhaps I
-should rename it to integration-config.xml).
+To start using spring-integration, take a first look at `build.gradle` and
+choose, witch further artifacts of spring-integration you want to enable, by
+default, I just enabled core, so you probably want to also enable http, jmx or
+mail.
 
+Now take a look at `servlet-config.xml`, here I enabled most namespaces (you
+can get rid of the ones you don't want to use). Now this is the file you want
+to start to define all spring-beans including the spring-integration beans.
+
+It's easiest, if you install a plugin to your IDE, like STS for eclipse, see
+http://spring.io/tools/sts.
 
 Build
 -----

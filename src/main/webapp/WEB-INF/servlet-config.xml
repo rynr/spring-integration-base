@@ -3,9 +3,25 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
-		http://www.springframework.org/schema/integration/http http://www.springframework.org/schema/integration/http/spring-integration-http.xsd"
+		http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file.xsd
+		http://www.springframework.org/schema/integration/http http://www.springframework.org/schema/integration/http/spring-integration-http.xsd
+		http://www.springframework.org/schema/integration/jms http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd
+		http://www.springframework.org/schema/integration/mail http://www.springframework.org/schema/integration/mail/spring-integration-mail.xsd
+		http://www.springframework.org/schema/integration/rmi http://www.springframework.org/schema/integration/rmi/spring-integration-rmi.xsd
+		http://www.springframework.org/schema/integration/stream http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd
+		http://www.springframework.org/schema/integration/twitter http://www.springframework.org/schema/integration/twitter/spring-integration-twitter.xsd
+		http://www.springframework.org/schema/integration/ws http://www.springframework.org/schema/integration/ws/spring-integration-ws.xsd
+		http://www.springframework.org/schema/integration/xml http://www.springframework.org/schema/integration/xml/spring-integration-xml.xsd"
 	xmlns:int="http://www.springframework.org/schema/integration"
-	xmlns:int-http="http://www.springframework.org/schema/integration/http">
+	xmlns:int-file="http://www.springframework.org/schema/integration/file"
+	xmlns:int-http="http://www.springframework.org/schema/integration/http"
+	xmlns:int-jms="http://www.springframework.org/schema/integration/jms"
+	xmlns:int-mail="http://www.springframework.org/schema/integration/mail"
+	xmlns:int-rmi="http://www.springframework.org/schema/integration/rmi"
+	xmlns:int-stream="http://www.springframework.org/schema/integration/stream"
+	xmlns:int-twitter="http://www.springframework.org/schema/integration/twitter"
+	xmlns:int-ws="http://www.springframework.org/schema/integration/ws"
+	xmlns:int-xml="http://www.springframework.org/schema/integration/xml">
 
 	<int:annotation-config />
 
