@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.6
+version = '0.0.0a'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'spring-integration-base', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.integration:spring-integration-core:2.2.5.RELEASE'
+    compile 'org.springframework.integration:spring-integration-http:2.2.5.RELEASE'
+    compile 'org.springframework:spring-test:3.2.4.RELEASE'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'org.slf4j:slf4j-simple:1.7.5'
+    compile 'org.json:json:20090211'
+    testCompile 'junit:junit:4.11'
+}
+
+sourceSets.main.java.srcDir 'src/main/webapp'
