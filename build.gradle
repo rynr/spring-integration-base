@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'jetty'
+apply plugin: 'war'
 
 sourceCompatibility = 1.6
 version = '0.0.0a'
@@ -47,5 +48,3 @@ dependencies {
     testCompile 'org.springframework.integration:spring-integration-test:latest.release'
     testCompile 'org.slf4j:slf4j-simple:latest.release'
 }
-
-sourceSets.main.java.srcDir 'src/main/webapp'
